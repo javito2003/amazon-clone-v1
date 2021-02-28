@@ -11,17 +11,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
-app.post('/', (req,res) => {
-    const name = req.body.name
-    if (!name) {
-        return res.send('NO name')
-    } else{
-        console.log(name);
-        return res.send(`Welcome ${name}`)
-
-    }
-})
-
 app.get('/', (req,res) => {
     res.send('Hello world')
 })
